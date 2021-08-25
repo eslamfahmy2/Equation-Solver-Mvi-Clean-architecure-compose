@@ -1,7 +1,8 @@
-package com.example.equationsolver
+package com.example.equationsolver.presentation.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.equationsolver.R
 import dagger.hilt.android.AndroidEntryPoint
 
 

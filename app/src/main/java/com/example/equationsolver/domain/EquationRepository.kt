@@ -5,9 +5,8 @@ import androidx.work.WorkInfo
 
 interface EquationRepository {
 
-    fun workRequest(vararg param: Float, operator: String , delay : Long)
+    fun workRequest(vararg param: Float, operator: String, delay: Long)
 
-     fun listWorks(): LiveData<MutableList<WorkInfo>>
+    fun listWorks(): LiveData<MutableList<WorkInfo>>
 
-    fun cancelWorks()
 }

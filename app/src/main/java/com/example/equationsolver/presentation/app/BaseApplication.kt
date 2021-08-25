@@ -1,4 +1,4 @@
-package com.example.equationsolver
+package com.example.equationsolver.presentation.app
 
 import android.app.Application
 import androidx.compose.runtime.mutableStateOf
@@ -12,6 +12,5 @@ class BaseApplication : Application() {
     fun toggleTheme() {
         this.isDark.value = !this.isDark.value
     }
-
     fun isDark () : Boolean = this.isDark.value
 }

@@ -12,6 +12,8 @@ class MathWorkManager @Inject constructor(
 ) {
     fun workRequest(vararg param: Float, operator: String, delay: Long) {
 
+         workManager.cancelAllWork()
+
         val inputData = workDataOf(EQUATION_PARAMS to param, EQUATION_OPERATOR to operator)
 
         val uploadWorkRequest: WorkRequest = OneTimeWorkRequestBuilder<MathWorker>()

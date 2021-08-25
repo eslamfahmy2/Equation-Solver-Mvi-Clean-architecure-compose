@@ -1,7 +1,6 @@
 package com.example.equationsolver.data.worker
 
 import android.content.Context
-import android.util.Log
 import androidx.hilt.work.HiltWorker
 import androidx.work.CoroutineWorker
 import androidx.work.WorkerParameters
@@ -33,10 +32,8 @@ class MathWorker @AssistedInject constructor(
             val equationParam = inputData.getFloatArray(EQUATION_PARAMS) ?: floatArrayOf()
             val equationOperator = inputData.getString(EQUATION_OPERATOR) ?: Operator.SUM.toString()
 
-
             val result = Engine.solve(*equationParam, operator = equationOperator)
             val data = workDataOf(RESULT to result)
-
 
             Result.success(data)
         } catch (e: Exception) {

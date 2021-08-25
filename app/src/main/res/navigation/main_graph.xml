@@ -7,5 +7,13 @@
     <fragment
         android:id="@+id/equationsListFragment"
         android:name="com.example.equationsolver.presentation.ui.EquationsListFragment"
-        android:label="EquationsListFragment" />
+        android:label="EquationsListFragment" >
+        <action
+            android:id="@+id/action_equationsListFragment_to_solveEquationFragment"
+            app:destination="@id/solveEquationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/solveEquationFragment"
+        android:name="com.example.equationsolver.presentation.ui.SolveEquationFragment"
+        android:label="SolveEquationFragment" />
 </navigation>

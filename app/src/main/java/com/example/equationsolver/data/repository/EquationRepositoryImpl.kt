@@ -19,8 +19,4 @@ class EquationRepositoryImpl @Inject constructor(
         return workManager.listWorkersInfo()
     }
 
-    override fun cancelWorks() {
-        workManager.cancelWorks()
-    }
-
 }

@@ -3,10 +3,7 @@ package com.example.equationsolver.di
 import android.app.Application
 import android.content.Context
 import androidx.work.WorkManager
-import com.example.equationsolver.BaseApplication
-import com.example.equationsolver.data.repository.EquationRepositoryImpl
-import com.example.equationsolver.domain.EquationRepository
-import dagger.Binds
+import com.example.equationsolver.presentation.app.BaseApplication
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

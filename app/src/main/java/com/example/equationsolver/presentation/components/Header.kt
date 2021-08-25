@@ -5,9 +5,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.AccountBox
-import androidx.compose.material.icons.rounded.AddCircle
-import androidx.compose.material.icons.rounded.MoreVert
+import androidx.compose.material.icons.rounded.ArrowBack
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment.Companion.CenterVertically
 import androidx.compose.ui.Modifier
@@ -19,9 +17,9 @@ import androidx.compose.ui.unit.sp
 
 
 @Composable
-fun AppBar(
-    navigateToSolver: () -> Unit,
-    onToggleTheme: () -> Unit
+fun Header(
+    title: String,
+    navigateBack: () -> Unit,
 ) {
     Surface(
         modifier = Modifier
@@ -32,8 +30,15 @@ fun AppBar(
 
         Row(modifier = Modifier.fillMaxWidth()) {
 
+            IconButton(
+                onClick = { navigateBack() },
+                modifier = Modifier.align(CenterVertically)
+            ) {
+                Icon(Icons.Rounded.ArrowBack, contentDescription = "Localized description")
+            }
+
             Text(
-                text = "Math Engine",
+                text = title,
                 modifier = Modifier.padding(12.dp),
                 style = TextStyle(
                     color = Color.Black,
@@ -42,19 +47,6 @@ fun AppBar(
                 )
             )
 
-            IconButton(
-                onClick = { navigateToSolver() },
-                modifier = Modifier.align(CenterVertically)
-            ) {
-                Icon(Icons.Rounded.AddCircle, contentDescription = "Localized description")
-            }
-
-            IconButton(
-                onClick = { onToggleTheme() },
-                modifier = Modifier.align(CenterVertically)
-            ) {
-                Icon(Icons.Rounded.MoreVert, contentDescription = "Localized description")
-            }
         }
 
     }

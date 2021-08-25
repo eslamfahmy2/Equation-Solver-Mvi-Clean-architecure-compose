@@ -44,7 +44,7 @@ fun ResultCard(
                 text = resultModel.progress,
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(8.dp),
+                    .padding(12.dp),
                 style = TextStyle(
                     color = MaterialTheme.colors.onSurface,
                     fontSize = 12.sp

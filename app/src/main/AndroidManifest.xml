@@ -4,7 +4,7 @@
 
     <application
         android:debuggable="true"
-        android:name=".BaseApplication"
+        android:name=".presentation.app.BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Yarab.NoActionBar">
         <activity
-            android:name=".MainActivity"
+            android:name=".presentation.ui.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Design.NoActionBar">
